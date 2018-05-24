@@ -1,0 +1,14 @@
+{
+  "name": "tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose ./tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "1.0.0-beta.4"
+  }
+}
