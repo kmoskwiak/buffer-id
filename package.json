@@ -6,6 +6,10 @@
   "scripts": {
     "test": "ava --verbose ./tests"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmoskwiak/buffer-id.git"
+  },
   "author": "Kasper Moskwiak <kaspre.moskwiak@gmail.com",
   "license": "ISC",
   "devDependencies": {
