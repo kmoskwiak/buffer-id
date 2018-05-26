@@ -72,6 +72,7 @@ Creates new id. New id is either `buffer` or `array` (depends on store settings)
 
 ### `remove`
 Params:
+
 | name    | type             | required  |
 | ------- |------------------| ----------|
 | id      | array \| buffer  | true      |
@@ -88,7 +89,7 @@ Tree is used as internal structore of idStore. Animations shows creating and rem
 This module can be used to create buffer ids which we can be sent to some service alongside with buffer message.
 
 Lets say we have two microservices A and B, which can communicate using strings and buffers. Sending file from A to B could look like that:
-1. A to B: "I am about to send file named cat.jpg',
+1. A to B: "I am about to send file named cat.jpg",
 2. B to A: "Ok, send it with id [0,0,0],
 
 Then on the side of A:
