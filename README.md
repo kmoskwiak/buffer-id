@@ -1,4 +1,5 @@
 # buffer-id
+[![Build Status](https://travis-ci.org/kmoskwiak/buffer-id.svg?branch=master)](https://travis-ci.org/kmoskwiak/buffer-id)
 ## Install
 ```
 npm install buffer-id
