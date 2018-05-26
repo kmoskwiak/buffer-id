@@ -81,7 +81,7 @@ Params:
 Removes id from store, so it can be reused. 
 
 ## Implementation
-Tree is used as internal structore of idStore. Animations shows creating and removing id when idLength is 3 and indexRange is 3. Identifiers are form rnage [0,0,0] to [2,2,2].
+Tree is used as internal structore of idStore. Animations shows creating and removing id when idLength is 3 and indexRange is 3. Identifiers are from range [0,0,0] to [2,2,2].
 
 ![implementation of buffer-id](https://raw.githubusercontent.com/kmoskwiak/files/master/buffer-id/buffer-id.gif)
 
