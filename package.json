@@ -1,12 +1,12 @@
 {
-  "name": "tree",
+  "name": "buffer-id",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creates unique reusable identifiers as buffers or arrays",
   "main": "index.js",
   "scripts": {
     "test": "ava --verbose ./tests"
   },
-  "author": "",
+  "author": "Kasper Moskwiak <kaspre.moskwiak@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "ava": "1.0.0-beta.4"
