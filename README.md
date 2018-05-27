@@ -13,10 +13,10 @@ Example ids created by this module:
 
 ## Use
 Create store and pass some options to it. For example idStore with options:
-* idLenggth = 3
+* idLength = 3
 * indexRange = 256
 
-will be able to create ids of length 3 where first id will be [0,0,0] and last [255,255,255]. That gives 16777216 possilbe ids.
+will be able to create ids of length 3 where first id will be [0,0,0] and last [255,255,255]. That gives 16777216 possible ids.
 
 
 ```js
@@ -58,7 +58,7 @@ Note that starting value is always 0, so range 256 will allow values form 0 to 2
 
 For example if idLength is set to 3:
 * indexRange = 256 will produce ids from `[0,0,0]` (`<00 00 00>` as buffer) to `[255,255,255]` (`<ff ff ff>` as buffer) (that gives 16777216 ids)
-* indexRange = 10 will produce ids from `[0,0,0]` (`<00 00 00>` as buffer) to `[9,9,9]` (`<09 09 09>` as buffer) (taht gives 1000 ids)
+* indexRange = 10 will produce ids from `[0,0,0]` (`<00 00 00>` as buffer) to `[9,9,9]` (`<09 09 09>` as buffer) (that gives 1000 ids)
 
 
 ### `idFormat` - default format of ids (can be array or buffer)
@@ -81,7 +81,7 @@ Params:
 Removes id from store, so it can be reused. 
 
 ## Implementation
-Tree is used as internal structore of idStore. Animations shows creating and removing id when idLength is 3 and indexRange is 3. Identifiers are from range [0,0,0] to [2,2,2].
+Tree is used as internal structure of idStore. Animation shows creating and removing id when idLength is 3 and indexRange is 3. Identifiers are from range [0,0,0] to [2,2,2].
 
 ![implementation of buffer-id](https://raw.githubusercontent.com/kmoskwiak/files/master/buffer-id/buffer-id.gif)
 
