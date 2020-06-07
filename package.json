@@ -3,7 +3,13 @@
   "version": "1.0.2",
   "description": "Creates unique reusable identifiers as buffers or arrays",
   "keywords": [
-    "id", "unique", "buffer", "identifier", "reusable", "array", "generator"
+    "id",
+    "unique",
+    "buffer",
+    "identifier",
+    "reusable",
+    "array",
+    "generator"
   ],
   "main": "index.js",
   "scripts": {
@@ -16,6 +22,6 @@
   "author": "Kasper Moskwiak <kasper.moskwiak@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "ava": "1.0.0-beta.4"
+    "ava": "^3.8.2"
   }
 }
