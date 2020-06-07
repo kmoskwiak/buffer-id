@@ -3,19 +3,25 @@
   "version": "1.0.2",
   "description": "Creates unique reusable identifiers as buffers or arrays",
   "keywords": [
-    "id", "unique", "buffer", "identifier", "reusable", "array", "generator"
+    "id",
+    "unique",
+    "buffer",
+    "identifier",
+    "reusable",
+    "array",
+    "generator"
   ],
   "main": "index.js",
   "scripts": {
-    "test": "ava --verbose ./tests"
+    "test": "ava --verbose"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/kmoskwiak/buffer-id.git"
   },
-  "author": "Kasper Moskwiak <kasper.moskwiak@gmail.com>",
+  "author": "Kasper Moskwiak <kasper.moskwiak@gmail.com> (https://kspr.dev)",
   "license": "ISC",
   "devDependencies": {
-    "ava": "1.0.0-beta.4"
+    "ava": "^3.8.2"
   }
 }
