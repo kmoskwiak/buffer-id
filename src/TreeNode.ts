@@ -65,6 +65,61 @@ class TreeNode {
   }
 
   /**
+   * Check if node is full
+   * @returns {Boolean} true if node is full
+   */
+  isFull() {
+    this.checkFull();
+    return this.full;
+  }
+
+  /**
+   * Check if node is full
+   */
+  checkFull() {
+    if (this.last) {
+      this.full = true;
+      return;
+    }
+
+    if (!this.children.isIndexRangeReached()) {
+      this.full = false;
+      return;
+    }
+
+    let full = true;
+    this.children.forEach((child) => {
+      full = full && child.isFull();
+    });
+    this.full = full && this.children.isIndexRangeReached();
+  }
+
+  /**
+   * Creates new identifier as array. Buffer id is accessible under asBuffer property
+   * @returns {Array} identifier as array
+   */
+  create(): number[] | Buffer {
+    if (this.getPath().length === this.idLength) {
+      if (this.options.idFormat === "buffer") {
+        return Buffer.from(this.getPath());
+      }
+      return this.getPath();
+    }
+
+    let child = this.children.getNotFull();
+
+    if (!child) {
+      child = this.children.add(this.options, this);
+    }
+
+    if (child) {
+      return child.create();
+    }
+
+    throw new Error("Index range reached");
+  }
+
+  /**
    * Returns node index
    * @returns {Number} node index
    */

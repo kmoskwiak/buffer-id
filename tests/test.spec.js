@@ -1,5 +1,5 @@
 const test = require("ava");
-const BufferId = require("../index");
+const BufferId = require("../lib/BufferId").default;
 
 test("First path should be [0,0,0]", (t) => {
   const root = new BufferId({
