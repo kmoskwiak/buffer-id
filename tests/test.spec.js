@@ -1,5 +1,7 @@
 const test = require("ava");
 const BufferId = require("../lib/BufferId").default;
+const BufferIdError = require("../lib/Errors").default;
+const { INDEX_RANGE_REACHED } = require("../lib/Errors");
 
 test("First path should be [0,0,0]", (t) => {
   const root = new BufferId({
@@ -61,6 +63,22 @@ test("Last ID should be [1,1]", (t) => {
 
   let path = root.create();
   t.deepEqual(path, [1, 1]);
+});
+
+test("Should throw is index range is reached", (t) => {
+  const root = new BufferId({
+    idLength: 2,
+    indexRange: 2,
+  });
+
+  root.create(); // [0,0]
+  root.create(); // [0,1]
+  root.create(); // [1,0]
+  root.create(); // [1,1]
+  t.throws(() => root.create(), {
+    instanceOf: BufferIdError,
+    code: INDEX_RANGE_REACHED,
+  }); // Full!
 });
 
 test("indexRange should be 256 if option is not specified", (t) => {

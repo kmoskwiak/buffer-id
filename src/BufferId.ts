@@ -1,12 +1,13 @@
 import TreeNode from "./TreeNode";
 import { BufferIdOptions } from "./interface";
+import BufferIdError, { ID_LENGHT_REQUIRED } from "./Errors";
 
 class BufferId {
   options: BufferIdOptions;
 
   constructor(options: BufferIdOptions) {
     if (!options.idLength) {
-      throw new Error("idLength is required");
+      throw new BufferIdError(ID_LENGHT_REQUIRED, "idLength is required");
     }
 
     this.options = {

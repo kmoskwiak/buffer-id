@@ -1,5 +1,6 @@
 import { BufferIdOptions } from "./interface";
 import Children from "./Children";
+import BufferIdError, { INDEX_RANGE_REACHED } from "./Errors";
 
 class TreeNode {
   options: BufferIdOptions;
@@ -116,7 +117,7 @@ class TreeNode {
       return child.create();
     }
 
-    throw new Error("Index range reached");
+    throw new BufferIdError(INDEX_RANGE_REACHED, "Index range reached");
   }
 
   /**
