@@ -1,7 +1,30 @@
 const test = require("ava");
 const BufferId = require("../lib/BufferId").default;
 const BufferIdError = require("../lib/Errors").default;
-const { INDEX_RANGE_REACHED } = require("../lib/Errors");
+const { INDEX_RANGE_REACHED, ID_LENGHT_REQUIRED } = require("../lib/Errors");
+
+test("Should throw if idLenght is not provided", (t) => {
+  t.throws(
+    () => {
+      new BufferId();
+    },
+    { instanceOf: BufferIdError, code: ID_LENGHT_REQUIRED }
+  );
+
+  t.throws(
+    () => {
+      new BufferId({});
+    },
+    { instanceOf: BufferIdError, code: ID_LENGHT_REQUIRED }
+  );
+
+  t.throws(
+    () => {
+      new BufferId({ indexRange: 256 });
+    },
+    { instanceOf: BufferIdError, code: ID_LENGHT_REQUIRED }
+  );
+});
 
 test("First path should be [0,0,0]", (t) => {
   const root = new BufferId({

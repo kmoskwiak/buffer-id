@@ -14,7 +14,8 @@
   "main": "lib/BufferId.js",
   "scripts": {
     "build": "tsc",
-    "test": "ava --verbose"
+    "test": "ava",
+    "test:watch": "ava --verbose --watch"
   },
   "repository": {
     "type": "git",

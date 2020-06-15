@@ -6,7 +6,7 @@ class BufferId {
   options: BufferIdOptions;
 
   constructor(options: BufferIdOptions) {
-    if (!options.idLength) {
+    if (!options || !options.idLength) {
       throw new BufferIdError(ID_LENGHT_REQUIRED, "idLength is required");
     }
 
