@@ -11,9 +11,11 @@
     "array",
     "generator"
   ],
-  "main": "index.js",
+  "main": "lib/BufferId.js",
   "scripts": {
-    "test": "ava --verbose"
+    "build": "tsc",
+    "test": "ava",
+    "test:watch": "ava --verbose --watch"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,8 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^3.8.2"
+  },
+  "dependencies": {
+    "typescript": "^3.9.5"
   }
 }

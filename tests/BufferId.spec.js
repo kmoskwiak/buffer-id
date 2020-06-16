@@ -1,5 +1,30 @@
 const test = require("ava");
-const BufferId = require("../index");
+const BufferId = require("../lib/BufferId").default;
+const BufferIdError = require("../lib/Errors").default;
+const { INDEX_RANGE_REACHED, ID_LENGHT_REQUIRED } = require("../lib/Errors");
+
+test("Should throw if idLenght is not provided", (t) => {
+  t.throws(
+    () => {
+      new BufferId();
+    },
+    { instanceOf: BufferIdError, code: ID_LENGHT_REQUIRED }
+  );
+
+  t.throws(
+    () => {
+      new BufferId({});
+    },
+    { instanceOf: BufferIdError, code: ID_LENGHT_REQUIRED }
+  );
+
+  t.throws(
+    () => {
+      new BufferId({ indexRange: 256 });
+    },
+    { instanceOf: BufferIdError, code: ID_LENGHT_REQUIRED }
+  );
+});
 
 test("First path should be [0,0,0]", (t) => {
   const root = new BufferId({
@@ -61,6 +86,22 @@ test("Last ID should be [1,1]", (t) => {
 
   let path = root.create();
   t.deepEqual(path, [1, 1]);
+});
+
+test("Should throw is index range is reached", (t) => {
+  const root = new BufferId({
+    idLength: 2,
+    indexRange: 2,
+  });
+
+  root.create(); // [0,0]
+  root.create(); // [0,1]
+  root.create(); // [1,0]
+  root.create(); // [1,1]
+  t.throws(() => root.create(), {
+    instanceOf: BufferIdError,
+    code: INDEX_RANGE_REACHED,
+  }); // Full!
 });
 
 test("indexRange should be 256 if option is not specified", (t) => {

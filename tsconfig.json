@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "checkJs": true,
+    "outDir": "lib",
+    "target": "ES2017",
+    "declaration": true
+  },
+  "include": ["src"]
+}
