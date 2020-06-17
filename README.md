@@ -1,6 +1,5 @@
 # buffer-id
 
-[![Build Status](https://travis-ci.org/kmoskwiak/buffer-id.svg?branch=master)](https://travis-ci.org/kmoskwiak/buffer-id)
 ![Node.js CI](https://github.com/kmoskwiak/buffer-id/workflows/Node.js%20CI/badge.svg)
 
 ## Install
