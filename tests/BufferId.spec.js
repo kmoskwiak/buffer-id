@@ -1,5 +1,5 @@
 const test = require("ava");
-const BufferId = require("../lib/BufferId").default;
+const BufferId = require("../lib/BufferId");
 const BufferIdError = require("../lib/Errors").default;
 const { INDEX_RANGE_REACHED, ID_LENGHT_REQUIRED } = require("../lib/Errors");
 

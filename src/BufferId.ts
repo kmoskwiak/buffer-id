@@ -22,4 +22,4 @@ class BufferId {
   }
 }
 
-export default BufferId;
+export = BufferId;
