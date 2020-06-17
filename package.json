@@ -22,7 +22,7 @@
     "url": "https://github.com/kmoskwiak/buffer-id.git"
   },
   "author": "Kasper Moskwiak <kasper.moskwiak@gmail.com> (https://kspr.dev)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "ava": "^3.8.2"
   },
