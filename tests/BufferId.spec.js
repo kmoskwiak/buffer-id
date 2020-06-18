@@ -128,3 +128,14 @@ test("id should be buffer if format is set to buffer", (t) => {
   let path = root.create();
   t.is(path instanceof Buffer, true);
 });
+
+test("should handle removal with no path", (t) => {
+  const root = new BufferId({
+    idLength: 3,
+    idFormat: "buffer",
+  });
+
+  root.create();
+
+  t.is(root.remove(), false);
+});
