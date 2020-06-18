@@ -1,6 +1,6 @@
 {
   "name": "buffer-id",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Creates unique reusable identifiers as buffers or arrays",
   "keywords": [
     "id",
