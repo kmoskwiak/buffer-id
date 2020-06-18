@@ -38,6 +38,10 @@ class Children {
    * @returns {TreeNode | false} removed child node or false if child does not exist
    */
   remove(fullPath: number[]): TreeNode | false {
+    if (!fullPath || !Array.isArray(fullPath)) {
+      return false;
+    }
+
     let index = fullPath.shift();
     let child = this.find(index);
 
