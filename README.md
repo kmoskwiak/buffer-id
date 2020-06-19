@@ -1,6 +1,7 @@
 # buffer-id
 
 ![Node.js CI](https://github.com/kmoskwiak/buffer-id/workflows/Node.js%20CI/badge.svg)
+![npm](https://img.shields.io/npm/v/buffer-id)
 
 ## Install
 
